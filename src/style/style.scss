@@ -1,1 +1,20 @@
 @import "~bootstrap";
+$gray: #888;
+
+.avatar-image{
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid $gray;
+}
+
+.item-box{
+  border-radius: 3px;
+  border: 1px solid $gray;
+  width: max-content;
+}
+.repo-description{
+  max-width: 80%;
+}
+.repo-item{
+  border-bottom: 1px solid $gray;
+}
