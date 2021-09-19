@@ -1,3 +1,4 @@
+import {ERRORS} from '../config/config'
 export const getTopGithubReposData = (responseData) => {
   const response = {};
   if (responseData?.items?.length) {
@@ -9,10 +10,10 @@ export const getTopGithubReposData = (responseData) => {
 export const getTopGithubReposError = (responseError) => {
   const response = {};
   if (responseError?.message.includes('exceeded')) {
-    response.error = 'Too many requests, please wait and try again';
+    response.error = ERRORS.LIMIT;
   }
   if (responseError?.message.includes('1000')) {
-    response.error = 'End of data.';
+    response.error = ERRORS.END;
   }
   return response;
 };
